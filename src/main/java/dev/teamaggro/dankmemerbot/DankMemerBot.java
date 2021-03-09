@@ -27,6 +27,8 @@ public class DankMemerBot {
         isRunning = true;
         Thread begThread = new Thread(new Begger());
         begThread.start();
+        Thread huntThread = new Thread(new Hunter());
+        huntThread.start();
     }
 
     public static void main(String[] args) {
