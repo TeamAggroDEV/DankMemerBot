@@ -32,7 +32,9 @@ public class DankMemerBot {
         Thread pmThread = new Thread(new MemePoster());
         pmThread.start();
         Thread fishThread = new Thread(new Fisher());
-        pmThread.start();
+        fishThread.start();
+        Thread triviaThread = new Thread(new TriviaGuesser());
+        triviaThread.start();
     }
 
     public static void main(String[] args) {
