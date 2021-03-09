@@ -6,7 +6,7 @@ public class Begger implements Runnable {
 
     @Override
     public void run() {
-        final int startDelay = new Random().nextInt(6000);
+        final int startDelay = new Random().nextInt(10000);
         try {
             Thread.sleep(startDelay);
         } catch (InterruptedException e) {
