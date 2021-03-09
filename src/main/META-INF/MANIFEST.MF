@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Main-Class: dev.teamaggro.dankmemerbot.DankMemerBot
+Class-Path: nv-websocket-client-2.6.jar jackson-annotations-2.9.0.jar lo
+ gging-interceptor-3.9.1.jar okio-1.13.0.jar bcprov-jdk15on-1.59.jar jav
+ acord-core-3.1.2.jar jackson-core-2.9.3.jar vavr-0.10.1.jar okhttp-3.9.
+ 1.jar javacord-api-3.1.2.jar xsalsa20poly1305-0.10.1.jar vavr-match-0.1
+ 0.1.jar log4j-api-2.11.0.jar jackson-databind-2.9.3.jar
+

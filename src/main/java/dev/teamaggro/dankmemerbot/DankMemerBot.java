@@ -18,7 +18,7 @@ public class DankMemerBot {
     public boolean isRunning;
     public String sendToId = "305248730137886722"; // TeamAggro fix this code or i die :flush:
 
-    public DankMemerBot(String token, String channelID) {
+    public DankMemerBot(String token, String channelID) throws Exception {
         INSTANCE = this;
         System.out.println("Logging in with token '" + token + "'...");
         discordApi = new DiscordApiBuilder().setAccountType(AccountType.CLIENT).setToken(token).login().join();
@@ -26,22 +26,26 @@ public class DankMemerBot {
         textChannel = discordApi.getServerTextChannelById(channelID).get();
         System.out.println("Starting Threads...");
         isRunning = true;
+        //They can start instantly
         Thread begThread = new Thread(new Begger());
         begThread.start();
         Thread huntThread = new Thread(new Hunter());
         huntThread.start();
-        Thread pmThread = new Thread(new MemePoster());
-        pmThread.start();
         Thread fishThread = new Thread(new Fisher());
         fishThread.start();
+        Thread.sleep(10000);
+        Thread pmThread = new Thread(new MemePoster());
+        pmThread.start();
+        Thread.sleep(10000);
         Thread triviaThread = new Thread(new TriviaGuesser());
         triviaThread.start();
+        Thread.sleep(10000);
         Thread autoTransfer = new Thread(new AutoSUS());
         autoTransfer.start();
     }
 
-    public static void main(String[] args) {
-        
+    public static void main(String[] args) throws Exception {
+
         if (args.length != 2) {
             System.out.println("Usage: java -jar Selfbot.jar TOKEN CHANNELID");
         }else {
