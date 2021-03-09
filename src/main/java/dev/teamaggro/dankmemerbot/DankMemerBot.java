@@ -31,6 +31,8 @@ public class DankMemerBot {
         huntThread.start();
         Thread pmThread = new Thread(new MemePoster());
         pmThread.start();
+        Thread fishThread = new Thread(new Fisher());
+        pmThread.start();
     }
 
     public static void main(String[] args) {
