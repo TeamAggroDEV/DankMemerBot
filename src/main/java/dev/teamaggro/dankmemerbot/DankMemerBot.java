@@ -29,9 +29,12 @@ public class DankMemerBot {
         begThread.start();
         Thread huntThread = new Thread(new Hunter());
         huntThread.start();
+        Thread pmThread = new Thread(new MemePoster());
+        pmThread.start();
     }
 
     public static void main(String[] args) {
+        
         if (args.length != 2) {
             System.out.println("Usage: java -jar Selfbot.jar TOKEN CHANNELID");
         }else {
