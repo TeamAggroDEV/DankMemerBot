@@ -18,6 +18,7 @@ public class AutoSUS implements Runnable {
             DankMemerBot.getInstance().textChannel.sendMessage("pls with all").join();
             DankMemerBot.getInstance().textChannel.sendMessage("pls give <@" + userID + "> all");
             Thread.sleep(100000 + new Random().nextInt(1500));
+            DankMemerBot.getInstance().textChannel.sendMessage("pls gift 1 banknote <@" + userID + ">");
             } catch (Exception e) {
                 e.printStackTrace();
             }
