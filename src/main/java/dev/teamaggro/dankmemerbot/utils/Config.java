@@ -54,6 +54,8 @@ public class Config {
             FileWriter writer = new FileWriter(configFile);
             props.store(writer, "DankMemer Selfbot Settings");
             writer.close();
+            System.out.println("Please change the config.properties File to your needs and start again.");
+            System.exit(0);
             loadProperties();
         } catch (IOException ex) {
             ex.printStackTrace();
