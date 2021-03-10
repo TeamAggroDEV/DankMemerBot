@@ -1,9 +1,10 @@
-package dev.teamaggro.dankmemerbot;
+package dev.teamaggro.dankmemerbot.commands;
+
+import dev.teamaggro.dankmemerbot.DankMemerBot;
 
 import java.util.Random;
 
-public class Fisher implements Runnable {
-
+public class Begger implements Runnable {
 
     @Override
     public void run() {
@@ -15,8 +16,8 @@ public class Fisher implements Runnable {
         }
         while (DankMemerBot.getInstance().isRunning()) {
             try {
-                DankMemerBot.getInstance().textChannel.sendMessage("pls fish").join();
-                Thread.sleep(45000 + new Random().nextInt(1500));
+            DankMemerBot.getInstance().textChannel.sendMessage("pls beg").join();
+            Thread.sleep(50000 + new Random().nextInt(1500));
             } catch (Exception e) {
                 e.printStackTrace();
             }
